@@ -6,9 +6,10 @@
       <th>Item name</th>
       <th>Item type</th>
       <th>Item color</th>
-      <th>Item date owned</th>
       <th>Quantity</th>
       <th>Size</th>
+      <th>Item date owned</th>
+      <th>Date uploaded</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,9 +22,10 @@
         <td><%= item.item_name %></td>
         <td><%= item.item_type %></td>
         <td><%= item.item_color %></td>
-        <td><%= item.item_date_owned %></td>
         <td><%= item.quantity %></td>
         <td><%= item.size %></td>
+        <td><%= item.item_date_owned %></td>
+        <td><%= item.created_at.strftime("%b. %d %Y") %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

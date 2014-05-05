@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: deaz5mtjh
+  api_key: '263536333495384'
+  api_secret: EBQFwMzrAKrpwbCY2wLd6E4HmMk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: deaz5mtjh
+  api_key: '263536333495384'
+  api_secret: EBQFwMzrAKrpwbCY2wLd6E4HmMk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: deaz5mtjh
+  api_key: '263536333495384'
+  api_secret: EBQFwMzrAKrpwbCY2wLd6E4HmMk
+  enhance_image_tag: true
+  static_image_support: false

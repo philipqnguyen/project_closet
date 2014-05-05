@@ -45,6 +45,12 @@ end
 # Devise for user authentication
 gem 'devise', '~> 3.2.4'
 
+# Pic storage Cloudinary
+gem 'cloudinary'
+
+# Attachinary pic uploader
+gem 'attachinary'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

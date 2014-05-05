@@ -1,5 +1,7 @@
 ProjectCloset::Application.routes.draw do
 
+  mount Attachinary::Engine => "/attachinary"
+
   resources :items
 
   devise_for :users
