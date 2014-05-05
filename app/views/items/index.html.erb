@@ -1,8 +1,9 @@
-<h1>My Closet</h1>
-<%= link_to "New Item", new_item_path, class: 'btn btn-primary' %>
-<table class="table table-striped">
+<h1>Listing items</h1>
+
+<table>
   <thead>
     <tr>
+      <th>User</th>
       <th>Item name</th>
       <th>Item type</th>
       <th>Item color</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
+        <td><%= item.user_id %></td>
         <td><%= item.item_name %></td>
         <td><%= item.item_type %></td>
         <td><%= item.item_color %></td>
@@ -31,3 +33,7 @@
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %>

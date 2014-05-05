@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @item.user_id %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @item.item_name %>
+</p>
+
+<p>
+  <strong>Item type:</strong>
+  <%= @item.item_type %>
+</p>
+
+<p>
+  <strong>Item color:</strong>
+  <%= @item.item_color %>
+</p>
+
+<p>
+  <strong>Item date owned:</strong>
+  <%= @item.item_date_owned %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @item.quantity %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @item.size %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', user_panel_path %>

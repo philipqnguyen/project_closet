@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
 	end
 
 	def user_panel
+		@items = current_user.items.all
 	end
 end
