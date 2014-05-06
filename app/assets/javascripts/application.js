@@ -19,6 +19,7 @@
 //= require jquery.fileupload
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
+//= require jquery.gridster.min.js
 //= require_tree .
 //= require turbolinks
 

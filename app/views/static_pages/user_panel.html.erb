@@ -1,35 +1,21 @@
 <h1>My Closet</h1>
-<%= link_to "New Item", new_item_path, class: 'btn btn-primary' %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Item name</th>
-      <th>Item type</th>
-      <th>Item color</th>
-      <th>Quantity</th>
-      <th>Size</th>
-      <th>Item date owned</th>
-      <th>Date uploaded</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.item_name %></td>
-        <td><%= item.item_type %></td>
-        <td><%= item.item_color %></td>
-        <td><%= item.quantity %></td>
-        <td><%= item.size %></td>
-        <td><%= item.item_date_owned %></td>
-        <td><%= item.created_at.strftime("%b. %d %Y") %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class='row text-center'>
+  <%= link_to "New Item", new_item_path, class: 'btn btn-primary' %>
+</div>
+<br/>
+<div class="gridster">
+  <ul>
+  <% @items.each do |item| %>
+    <li class="gridster-cell" data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <% if item.photo? %>
+        <div class='text-center gridster-image'><%= cl_image_tag(item.photo.path, { size: '125x125', crop: :fit }) %></div>
+      <% end %>
+      <%= link_to(item) do %>
+        <h4 class='text-center'><%= item.item_name %></h4>
+      <% end %>
+      <p class='text-center'><%= item.item_type %></p>
+      <p class='text-center'><%= item.item_color %></p>
+    </li>
+  <% end %>
+  </ul>
+</div>

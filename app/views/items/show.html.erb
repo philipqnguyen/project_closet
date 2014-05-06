@@ -24,6 +24,11 @@
 </p>
 
 <p>
+  <strong>Date uploaded:</strong>
+  <%= @item.created_at.strftime("%b %d %Y") %>
+</p>
+
+<p>
   <strong>Quantity:</strong>
   <%= @item.quantity %>
 </p>
@@ -34,4 +39,5 @@
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', user_panel_path %>
+<%= link_to 'Back', user_panel_path %> |
+<%= link_to 'Destroy', item_path, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -44,3 +44,14 @@ p {
     color: #b94a48;
     text-align: left;
 }
+
+/* ========= Custom Gridster =========== */
+
+.gridster-cell {
+	background-color: $brand-info;
+	list-style-type: none;
+	padding: 30px;
+}
+
+
+
