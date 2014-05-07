@@ -59,6 +59,12 @@ gem 'cloudinary'
 # Attachinary pic uploader
 gem 'attachinary'
 
+# Masonry for rails. The pinterest like vertical stacking of elements
+gem 'masonry-rails'
+
+# modernizr transitions for use with masonry
+gem 'modernizr-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

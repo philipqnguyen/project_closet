@@ -3,6 +3,8 @@
   <%= link_to "New Item", new_item_path, class: 'btn btn-primary' %>
 </div>
 <br/>
+<%
+=begin %>
 <div class="gridster">
   <ul>
   <% @items.each do |item| %>
@@ -18,4 +20,24 @@
     </li>
   <% end %>
   </ul>
+</div>
+<br/>
+<%
+=end %>
+
+
+
+<div id="masonry-container" class="gridster transitions-enabled centered infinite-scroll clearfix">
+  <% @items.reverse.each do |item| %>
+    <%= link_to(item) do %>
+      <div class="box col2">
+        <% if item.photo? %>
+          <div class='text-center gridster-image'><%= cl_image_tag(item.photo.path, { size: '125x125', crop: :fit }) %></div>
+        <% end %>
+        <h4 class='text-center'><%= item.item_name %></h4>
+        <p class='text-center'><%= item.item_type %></p>
+        <p class='text-center'><%= item.item_color %></p>
+      </div>
+    <% end %>
+  <% end %>
 </div>
