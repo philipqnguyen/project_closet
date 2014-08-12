@@ -1,0 +1,18 @@
+<h1>Admin Command Center</h1>
+<table class="table table-striped">
+  <th>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Email</td>
+    <td>Delete</td>
+  </th>
+  <% @users.each do |user| %>
+    <tr>
+      <td></td>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+      <td><%= link_to "Delete User", user_path(user.id), :confirm => "Are you sure?", :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>

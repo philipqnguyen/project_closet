@@ -5,9 +5,14 @@ ProjectCloset::Application.routes.draw do
   resources :items
 
   devise_for :users
+
+  resources :users
+
   root 'static_pages#front_page'
 
   get 'user_panel' => 'static_pages#user_panel'
+
+  get 'command_center' => 'static_pages#command_center'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
