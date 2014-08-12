@@ -3,8 +3,7 @@
   <%= link_to "New Item", new_item_path, class: 'btn btn-primary' %>
 </div>
 <br/>
-<%
-=begin %>
+
 <div class="gridster">
   <ul>
   <% @items.each do |item| %>
@@ -22,11 +21,10 @@
   </ul>
 </div>
 <br/>
+
+
 <%
-=end %>
-
-
-
+=begin %>
 <div id="masonry-container" class="gridster transitions-enabled centered infinite-scroll clearfix">
   <% @items.reverse.each do |item| %>
     <%= link_to(item) do %>
@@ -41,3 +39,5 @@
     <% end %>
   <% end %>
 </div>
+<%
+=end %>
