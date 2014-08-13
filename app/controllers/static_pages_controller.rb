@@ -7,7 +7,10 @@ class StaticPagesController < ApplicationController
 	end
 
   def command_center
-    redirect_to root_path if !current_user.admin
+    if !current_user.admin
+      redirect_to root_path
+      flash[:notice] = "You are not authorized to go there."
+    end
     @users = User.all
   end
 end

@@ -48,7 +48,8 @@ p {
 /* ========= Custom Gridster =========== */
 
 .gridster-cell {
-	background-color: $brand-info;
+	background-color: $gray-light;
+  border-radius: 25%;
 	list-style-type: none;
 	padding: 30px;
 }
@@ -66,8 +67,8 @@ p {
           border-radius: 5px;
 }
 
-.clearfix:before, .clearfix:after { 
-	content: ""; 
+.clearfix:before, .clearfix:after {
+	content: "";
 	display: table;
 }
 .clearfix:after { clear: both; }
